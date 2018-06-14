@@ -27,12 +27,11 @@ const styles = {
     marginRight: 20,
   },
   menuButton4: {
-    marginLeft: 120,
-    marginRight: 20,
+    marginLeft: 50,
+    marginRight: 60,
   },
   menuButton5: {
-    marginLeft: 120,
-    marginRight: 20,
+    marginLeft: 270,
   },
 };
 
@@ -107,7 +106,7 @@ class MenuAppBar extends React.Component {
                 </Menu>
 
                 <IconButton
-                  className={classes.menuButton3}
+                  className={classes.menuButton4}
                   aria-owns={open ? 'menu-appbar' : null}
                   aria-haspopup="true"
                   onClick={this.handleMenu}
@@ -117,7 +116,7 @@ class MenuAppBar extends React.Component {
                 </IconButton>
 
                 <IconButton
-                  className={classes.menuButton3}
+                  className={classes.menuButton5}
                   aria-owns={open ? 'menu-appbar' : null}
                   aria-haspopup="true"
                   onClick={this.handleMenu}
