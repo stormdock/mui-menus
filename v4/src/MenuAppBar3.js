@@ -114,7 +114,9 @@ class MenuAppBar extends React.Component {
                   onClose={this.handleClose}
                 >
                   <MenuItem onClick={this.handleClose}>Red</MenuItem>
-                  <MenuItem onClick={this.handleClose}>Blue</MenuItem>
+                  <MenuItem onClick={this.handleClose}>Orange</MenuItem>
+                  <MenuItem onClick={this.handleClose}>Yellow</MenuItem>
+                  <MenuItem onClick={this.handleClose}>Green</MenuItem>
                 </Menu>
 
                 <IconButton
@@ -126,6 +128,24 @@ class MenuAppBar extends React.Component {
                 >
                   <AccountCircle />
                 </IconButton>
+                <Menu
+                  id="menu-appbar"
+                  anchorEl={anchorEl}
+                  anchorOrigin={{
+                    vertical: "top",
+                    horizontal: "right"
+                  }}
+                  transformOrigin={{
+                    vertical: "top",
+                    horizontal: "right"
+                  }}
+                  open={open}
+                  onClose={this.handleClose}
+                >
+                  <MenuItem onClick={this.handleClose}>Blue</MenuItem>
+                  <MenuItem onClick={this.handleClose}>Indigo</MenuItem>
+                  <MenuItem onClick={this.handleClose}>Violet</MenuItem>
+                </Menu>
 
                 <IconButton
                   className={classes.menuButton5}
@@ -136,6 +156,23 @@ class MenuAppBar extends React.Component {
                 >
                   <AccountCircle />
                 </IconButton>
+                <Menu
+                  id="menu-appbar"
+                  anchorEl={anchorEl}
+                  anchorOrigin={{
+                    vertical: "top",
+                    horizontal: "right"
+                  }}
+                  transformOrigin={{
+                    vertical: "top",
+                    horizontal: "right"
+                  }}
+                  open={open}
+                  onClose={this.handleClose}
+                >
+                  <MenuItem onClick={this.handleClose}>White</MenuItem>
+                  <MenuItem onClick={this.handleClose}>Black</MenuItem>
+                </Menu>
               </div>
             )}
           </Toolbar>
