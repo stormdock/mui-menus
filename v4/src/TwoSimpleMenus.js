@@ -5,35 +5,44 @@ import MenuItem from "@material-ui/core/MenuItem";
 
 class SimpleMenu extends React.Component {
   state = {
-    anchorEl: null
+    anchorEl1: null,
+    anchorEl2: null,
   };
 
-  handleClick = event => {
-    this.setState({ anchorEl: event.currentTarget });
+  handleMenu1 = event => {
+    this.setState({ anchorEl1: event.currentTarget });
   };
 
-  handleClose = () => {
-    this.setState({ anchorEl: null });
+  handleMenu2 = event => {
+    this.setState({ anchorEl2: event.currentTarget });
+  };
+
+  handleMenu1Close = () => {
+    this.setState({ anchorEl1: null });
+  };
+
+  handleMenu2Close = () => {
+    this.setState({ anchorEl2: null });
   };
 
   render() {
-    const { anchorEl } = this.state;
+    const { anchorEl1, anchorEl2 } = this.state;
 
     return (
       <div>
         <div>
           <Button
-            aria-owns={anchorEl ? "simple-menu" : null}
+            aria-owns={anchorEl1 ? "simple-menu1" : null}
             aria-haspopup="true"
-            onClick={this.handleClick}
+            onClick={this.handleMenu1}
           >
             Menu1
           </Button>
           <Menu
-            id="simple-menu"
-            anchorEl={anchorEl}
-            open={Boolean(anchorEl)}
-            onClose={this.handleClose}
+            id="simple-menu1"
+            anchorEl={anchorEl1}
+            open={Boolean(anchorEl1)}
+            onClose={this.handleMenu1Close}
           >
             <MenuItem onClick={this.handleClose}>Red</MenuItem>
             <MenuItem onClick={this.handleClose}>Orange</MenuItem>
@@ -42,17 +51,17 @@ class SimpleMenu extends React.Component {
         </div>
         <div>
           <Button
-            aria-owns={anchorEl ? "simple-menu" : null}
+            aria-owns={anchorEl2 ? "simple-menu2" : null}
             aria-haspopup="true"
-            onClick={this.handleClick}
+            onClick={this.handleMenu2}
           >
             Menu2
           </Button>
           <Menu
-            id="simple-menu"
-            anchorEl={anchorEl}
-            open={Boolean(anchorEl)}
-            onClose={this.handleClose}
+            id="simple-menu2"
+            anchorEl={anchorEl2}
+            open={Boolean(anchorEl2)}
+            onClose={this.handleMenu2Close}
           >
             <MenuItem onClick={this.handleClose}>Green</MenuItem>
             <MenuItem onClick={this.handleClose}>Blue</MenuItem>
